@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Change The Luminosity</title>
+        <meta name="author" content="Jolene Kearse"> 
+        <meta name="description" content="A Colour Tool where users enter a hex code and can lighten or darken it with the on-page controls, then copy to their clipboard">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title text-shadow">Change The Luminosity</h1>
+
+            <label for="hex" class="text-shadow">Colour (Hex Code)</label>
+            <input type="text" name="hex" id="hexInput" value="#" onfocus="var temp=this.value; this.value=''; this.value=temp" placeholder="#000000" tabindex="0" autofocus>
+
+            <div class="toggle">
+                <p class="toggle-text text-shadow" id="lightenText">Lighten</p>
+                <div class="toggle-btn" id="toggleBtn" type="button" aria-pressed="true">
+                    <div class="inner-circle" id="innerCircle" tabindex="0"></div>
+                </div>
+                <p class="toggle-text text-shadow unselected" id="darkenText">Darken</p>
+            </div>
+
+            <label for="slider" id="sliderText" class="text-shadow">0%</label>
+            <input type="range" name="slider" id="slider" min="0" max="100" value="0" tabindex="0" class="lighten" aria-roledescription="range slider between 0 and 100">
+
+            <p>Input Colour</p>
+            <div class="color-box" id="inputColor"></div>
+            <div class="results">
+                <p>Altered Colour<span id="alteredColorText"></span></p>
+                <button type="button" class="copy-btn" id="copyBtn" tabindex="0" aria-roledescription="copy to clipboard button"><img src="copy.png" alt=""></button>
+            </div>
+            <div class="color-box" id="alteredColor"></div>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
