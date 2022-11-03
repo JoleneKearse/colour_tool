@@ -17,16 +17,6 @@ body {
     letter-spacing: 5;
 }
 
-.container {
-    max-width: clamp(50rem, 60rem, 70rem);
-    margin: 0 auto;
-    padding: 1em 7em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-}
-
 /* ------------- Utility Classes ------------- */
 
 .text-shadow {
@@ -79,6 +69,18 @@ input {
 #alteredColorText {
     padding: 0 1em;
     font-size: 1.35em;
+}
+
+/* ------------- Layout ------------- */
+
+.container {
+    max-width: clamp(50rem, 60rem, 70rem);
+    margin: 0 auto;
+    padding: 1em 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
 }
 
 /* ------------- Components ------------- */
@@ -179,6 +181,73 @@ button {
     border-radius: 10px;
     cursor: pointer;
 }
+
+/* toast container */
+.toast-container{
+    position: fixed;
+    background: black;
+    font-family: inherit;
+    color: white;
+    padding: 1em;
+    right: 5em;
+    bottom: 3em;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 6px;
+    display: none;
+}
+
+.revealed{
+    display: block;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    transition-timing-function: linear;
+}
+
+@keyframes FadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@-moz-keyframes FadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes FadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@-o-keyframes FadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@-ms-keyframes FadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+};
 
 /* ------------- Media Queries ------------- */
 

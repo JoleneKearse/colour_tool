@@ -10,6 +10,7 @@ const sliderText = document.getElementById("sliderText");
 const alteredColor = document.getElementById("alteredColor");
 const alteredColorText = document.getElementById("alteredColorText");
 const copyBtn = document.getElementById("copyBtn");
+let toastContainer = document.getElementById("toast-container");
 
 // display initial range track appearance
 root.style.setProperty(
@@ -145,4 +146,11 @@ const reset = () => {
 
 copyBtn.addEventListener("click", async () => {
   await navigator.clipboard.writeText(alteredHex.toUpperCase());
+  showModal();
 });
+
+//shows "copied to clipboard" modal for 2 seconds
+function showModal() {
+  toastContainer.classList.add("revealed");
+  setTimeout(() => toastContainer.classList.remove("revealed"), 2000);
+}
