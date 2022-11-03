@@ -45,7 +45,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .title {
     font-family: 'Lobster Two', cursive;
-    font-size: clamp(2.5rem, 3.4rem, 5rem);
+    font-size: clamp(2rem, 3.4rem, 5rem);
     text-align: center;
 }   
 
@@ -75,9 +75,8 @@ input {
 /* ------------- Layout ------------- */
 
 .container {
-    max-width: clamp(50rem, 60rem, 70rem);
-    margin: 0 auto;
-    padding: 1em 7em;
+    width: 700px;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,11 +126,13 @@ input {
 /* range */
 
 input[type=text] {
+    min-width: 250px;
     height: 2.5em;
 }
 
 input[type=range]{
     -webkit-appearance: none;
+    min-width: 250px;
     cursor: pointer;
 }
 
@@ -163,8 +164,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 /* colour display */
 .color-box {
+    min-width: 250px;
     height: 100px;
-    width: 100%;
     background-color: #2f3133;
     border-radius: 7px;
 }
@@ -254,8 +255,11 @@ button {
 
 @media (max-width: 470px) {
     .container {
+        width: 275px;
+        margin: 0 auto;
         gap: .5em;
-        padding: .5em 1em;
+        padding: .5em .5em;
+        background-color: red;
     }
     input[type=text] {
         height: 1.5em;
@@ -269,7 +273,6 @@ button {
         margin-top: -3px;
     }
     .toggle {
-        /* flex-direction: column; */
         gap: .3em;
         border: solid 1px #000;
         border-radius: 20px;

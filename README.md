@@ -36,7 +36,13 @@ copyBtn.addEventListener("click", async () => {
 ```
 
 6. Added a **popup** to confirm the code was indeed copied - with a pretty cool animation.
+
 7. Made **accessibility improvements** using `tabindex` and `aria-roledescription`. Added focus and hover states for all interactive page elements.
+
+8. Fixed an **edge case** where light colours could be affected when user `prefers-color-scheme: dark;` with one line:
+```css
+body { color-scheme: light dark };
+```
 
 ![Screenshot showing lighten colour, darken colour, and accessibility features](change_the_luminosity.gif).
 
