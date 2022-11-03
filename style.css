@@ -75,7 +75,8 @@ input {
 /* ------------- Layout ------------- */
 
 .container {
-    width: 700px;
+    width: min(100%, 700px);
+    padding-inline: 1rem;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -126,13 +127,11 @@ input {
 /* range */
 
 input[type=text] {
-    min-width: 250px;
     height: 2.5em;
 }
 
 input[type=range]{
     -webkit-appearance: none;
-    min-width: 250px;
     cursor: pointer;
 }
 
@@ -164,7 +163,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 /* colour display */
 .color-box {
-    min-width: 250px;
     height: 100px;
     background-color: #2f3133;
     border-radius: 7px;
@@ -254,13 +252,6 @@ button {
 /* ------------- Media Queries ------------- */
 
 @media (max-width: 470px) {
-    .container {
-        width: 275px;
-        margin: 0 auto;
-        gap: .5em;
-        padding: .5em .5em;
-        background-color: red;
-    }
     input[type=text] {
         height: 1.5em;
     }
